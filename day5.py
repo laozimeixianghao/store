@@ -108,7 +108,7 @@ def trans():
         bank[username1]["money"] += money
         a=bank[username]["money"]
         b=bank[username1]["money"]
-        print(a,b)
+        print("装出成功","装出账户余额为",a,"装入账户余额",b)
 
 def find():
     username = input("输入用户名")
