@@ -63,14 +63,14 @@ def adduser():#定义了一个方法
 #{'frank': {'account': 88474479, 'password': '1234', 'country': '1', 'province': '1', 'street': '1', 'door': '1', 'money': 0, 'bank_name': '狼腾测试猿银行'}}
 def save():
     username=input("请输入用户名")
-    account=int(input("输入账号"))
-    if  account == bank[username]["account"]:
+    account=int(input("请输入账号"))
+    if  account != bank[username]["account"]:
+        print("账号不存在")
+    elif account == bank[username]["account"]:
         money = int(input("输入存款金额"))
-        bank[username]["money"]+=money
+        bank[username]["money"] += money
         a = bank[username]["money"]
         print(a)
-    else:
-        print("账号不存在")
 
 def get():
     username = input("请输入用户名")
